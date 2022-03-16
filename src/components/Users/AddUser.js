@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Card from '../UI/Card';
-import styles from './AddUser.module.css';
+import Styles from './AddUser.module.css';
 import Button from '../UI/Button';
 
 const AddUser = props => {
@@ -18,7 +18,7 @@ const AddUser = props => {
         console.log(enteredUsername, enteredAge);
         setEnteredUsername('');
         setEnteredAge('');
-    }
+    };
 
     const usernameChangeHandler = (event) => {
         setEnteredUsername(event.target.value);
@@ -31,7 +31,7 @@ const AddUser = props => {
 
 
     return (
-        <Card className={styles.input}>
+        <Card className={Styles.input}>
         <form onSubmit={addUserHandler}>
             <label htmlFor="username" >Username</label>
             <input id="username" type="text" value={enteredUsername} onChange={usernameChangeHandler}/>
